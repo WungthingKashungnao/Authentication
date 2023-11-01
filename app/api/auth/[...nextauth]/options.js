@@ -28,10 +28,16 @@ export const options = {
       profile(profile) {
         console.log("Google Profile", profile);
 
+        // updating user role
+        let userRole = "Google User";
+        if (profile?.email === "wungthingkashungnao123@gmail.com") {
+          userRole = "admin";
+        }
+
         return {
           ...profile,
           id: profile.sub,
-          //   role: userRole,
+          role: userRole,
         };
       },
       // profile logic end

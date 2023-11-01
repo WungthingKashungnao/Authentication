@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getServerSession } from "next-auth";
+import { getServerSession, signOut, signIn } from "next-auth";
 import { options } from "../api/auth/[...nextauth]/options"; //option providers
 
 const Nav = async () => {
